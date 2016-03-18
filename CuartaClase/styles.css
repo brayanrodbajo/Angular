@@ -5,7 +5,7 @@
 	border-color: #78FA89;
 }
 #myForm{
-	width:450px;
+	max-width:450px;
 	padding:25px;
 	border:1px dotted lightgray;
 	margin-left:25px;

@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('store',[]);
+	var app = angular.module('store',['store-products']); // se crea la dependencia con el módulo de los productos porque para funcionar necesita productos
 
 	app.controller('StoreController',function(){ //el "StoreController" seria la clase
 		this.products=gems; //se declara la variable product que apunta a la variable gem
@@ -99,26 +99,5 @@
 		},
 	];
 
-	app.controller("PanelController", function(){
-		this.tab=1;
-		this.selectTab= function(secTab){
-			this.tab = secTab;
-		}
-		this.isSelected= function(tab){
-			return tab===this.tab;
-		}
-	});
-	//encapsulamos todo el comportamiento del formulario de review
-	app.controller("ReviewController", function(){
-		this.review={
-			stars:2
-		};
-		this.addReview = function(product){
 
-			product.reviews.push(this.review);
-			this.review={
-				stars:2
-			};
-		};
-	});
 })();
